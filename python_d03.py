@@ -575,11 +575,12 @@ print('****************************************')
 print(' 이름   국어   영어   수학   총점   평균')
 print('****************************************')
 for i in range(10):
-        print('{}  {}  {}  {}  {}  {:1.f}'.format(test[i][0],
+        print('{}    {}     {}     {}   {}   {:.1f}'.format(test[i][0],
                test[i][1], test[i][2], test[i][3], test[i][4], test[i][5]))
 
 print('****************************************\n')
-
-print('{} | {} | {} | {:.2f}'.format(avg_kor, avg_eng, avg_math, (avg_kor + avg_eng + avg_math) / 3))
+print('      {}  |  {}  |  {}  |    {:.2f}'.format(avg_kor, avg_eng, avg_math, (avg_kor + avg_eng + avg_math) / 3))
+#''_작은 따옴표를 쓸때 미리 두개를 써서 오류가 났다.
+#순서대로 코딩해야 오류가 나지 않음을 알았다.
 
 
