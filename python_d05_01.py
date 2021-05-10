@@ -6,13 +6,20 @@ class It(object):
 
     def __str__(self):
         return '{}는 {}명 근무'.format(self.company, self.employee)
-    
+
         #삼성전자 직원 100명 추가
     def __add__(self, num): #연산자 중복(magic method)
         self.employee = self.employee + num
 
     def __sub__(self, num):
         self.employee = self.employee - num
+
+    #재정의
+    def __eq__(self, other):
+        if self.company == other.company and self.employee == other.employee:
+            return True
+        else:
+            return False
 
     def disp_It(self):
         print('{}는 {}명 근무'.format(self.company, self.employee))
@@ -28,7 +35,6 @@ class It(object):
 
     def set_employee(self, employee):
         self.employee = employee
-
 
 it1 = It('google', 56000)
 it2 = It('facebook', 45000)
@@ -52,3 +58,7 @@ it1.disp_It()
 
 it1 - 1500
 it1.disp_It()
+#위에서 재정의 하지 않았다면 False가 나온다.
+it33 = It('facebook', 45000)
+
+print(it2 == it33)
