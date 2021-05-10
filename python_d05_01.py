@@ -6,6 +6,13 @@ class It(object):
 
     def __str__(self):
         return '{}는 {}명 근무'.format(self.company, self.employee)
+    
+        #삼성전자 직원 100명 추가
+    def __add__(self, num): #연산자 중복(magic method)
+        self.employee = self.employee + num
+
+    def __sub__(self, num):
+        self.employee = self.employee - num
 
     def disp_It(self):
         print('{}는 {}명 근무'.format(self.company, self.employee))
@@ -38,3 +45,10 @@ it1.set_company('삼성전자')
 it1.set_employee(96000)
 
 print(it1.get_company(), '의 직원은', it1.get_employee(), '명')
+
+#삼성전자 직원 100명 추가
+it1 + 100
+it1.disp_It()
+
+it1 - 1500
+it1.disp_It()
