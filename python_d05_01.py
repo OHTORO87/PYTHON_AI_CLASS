@@ -8,7 +8,7 @@ class It(object):
         return '{}는 {}명 근무'.format(self.company, self.employee)
 
     def disp_It(self):
-        print('{}는 {]명 근무'.format(self.company, self.employee))
+        print('{}는 {}명 근무'.format(self.company, self.employee))
 
     def get_company(self):
         return self.company
