@@ -1,4 +1,24 @@
+class It(object):
 
+    def __init__(self, company, employee):
+        self.company = company
+        self.employee = employee
+
+    def __str__(self):
+        return '{}는 {}명 근무'.format(self.company, self.employee)
+
+        #삼성전자 직원 100명 추가
+    def __add__(self, num): #연산자 중복(magic method)
+        self.employee = self.employee + num
+
+    def __sub__(self, num):
+        self.employee = self.employee - num
+
+    #재정의
+    def __eq__(self, other):
+        if self.company == other.company and self.employee == other.employee:
+            return True
+        else:
             return False
 
     def disp_It(self):
