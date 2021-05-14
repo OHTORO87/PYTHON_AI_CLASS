@@ -299,4 +299,28 @@ desc b2;
 # delete = 테이블의 내용을 지우는것(테이블은 남아있음)
 
 
+===============================
+data 세부자료 검색
+==============================
+
+use world;
+show tables;
+desc city;
+select count(*) from city;
+
+select * from city; (위에 리미트 걸려있다)
+
+'''
+select * from city limit 100; (100개만 출력)
+select * from city limit 100, 10; (100번쨰부터 10개만 출력)
+#인터넷 게시판 한번에 몇개씩 보기를 설정할때 쓰일수 있다.
+'''
+=======================================
+
+desc country;
+select count(*) from country; -- 239
+select count(*) from countrylanguage; -- 984
+
+
+
 
