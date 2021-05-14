@@ -315,13 +315,84 @@ mysql> select * from score;
 10 rows in set (0.00 sec)
 
 
+
+
+
+###########################################
+정렬하기
 ###########################################
 
+select * from score order by name asc;
+#순서대로(기본값적용)
++--------+------+------+------+
+| name   | kor  | mat  | eng  |
++--------+------+------+------+
+| 강감찬 |   75 |   80 |   95 |
+| 김정호 |   90 |   95 |   80 |
+| 박문수 |   95 |   98 |   96 |
+| 안중근 |   90 |   85 |   90 |
+| 오우석 |   50 |   45 |   60 |
+| 이순신 |   85 |   87 |   90 |
+| 임꺽정 |   15 |   35 |   45 |
+| 정몽주 |   90 |   90 |   95 |
+| 한석봉 |   99 |   98 |   99 |
+| 황진이 |   35 |   45 |   20 |
++--------+------+------+------+
+10 rows in set (0.00 sec)
 
-###########################################
 
 
 
+select * from score order by name desc;
+#역순(desc)
++--------+------+------+------+
+| name   | kor  | mat  | eng  |
++--------+------+------+------+
+| 황진이 |   35 |   45 |   20 |
+| 한석봉 |   99 |   98 |   99 |
+| 정몽주 |   90 |   90 |   95 |
+| 임꺽정 |   15 |   35 |   45 |
+| 이순신 |   85 |   87 |   90 |
+| 오우석 |   50 |   45 |   60 |
+| 안중근 |   90 |   85 |   90 |
+| 박문수 |   95 |   98 |   96 |
+| 김정호 |   90 |   95 |   80 |
+| 강감찬 |   75 |   80 |   95 |
++--------+------+------+------+
+10 rows in set (0.00 sec)
+
+
+#############################################
+오후 수업 마지막 핵심 내용
+#############################################
+select  user();
+use mysql;
+use acedb;
+show tables;
+create table s(
+	id int auto_increment primary key,
+	name varchar(20),
+    kor tinyint,
+    eng tinyint,
+    mat tinyint);
+    
+desc s;
+insert into s(name, kor, eng, mat) values('이순신',85,87,90);
+insert into s(name, kor, eng, mat) values('강감찬',75,80,90);
+insert into s(name, kor, eng, mat) values('한석봉',99,98,99);
+insert into s(name, kor, eng, mat) values('황진이',35,45,20);
+insert into s(name, kor, eng, mat) values('안중근',90,85,90);
+insert into s(name, kor, eng, mat) values('박문수',95,98,96);
+insert into s(name, kor, eng, mat) values('임꺽정',15,35,45);
+insert into s(name, kor, eng, mat) values('김정호',90,95,80);
+insert into s(name, kor, eng, mat) values('정몽주',90,90,95);
+insert into s(name, kor, eng, mat) values('양주종',50,45,60);
+
+select * from s limit 5;
+select * from s where  kor > 80;
+select * from s where  mat <= 50;
+select * from s where  mat <= 50 or kor <= 50;
+select * from s where  mat <= 50 and kor <= 50;
 
 
 
