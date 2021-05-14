@@ -1,3 +1,20 @@
 *****************
 #20210514 오전수업
 *****************
+#코딩 배우는 곳
+https://www.w3schools.com/sql/default.asp
+
+#mysql실행
+mysql> create database aadb;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> drop database aadb;
+
+
+==========
+계정(account)
+id : ace
+pw : 1234
+db : ace db
+
+==========
