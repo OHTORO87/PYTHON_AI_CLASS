@@ -258,6 +258,9 @@ create table book(
     			(이건 속도 느림)
     
     price int);
+    
+# title = 필드명
+# char = 자료형
 
 ## insert 여러번하면 중복데이터 발생함
 ## 데이터 중복 막기 위해 설정해주는게 primary 개념
@@ -281,7 +284,19 @@ mysql 자료형
 분석속도를 높히는 개념
 
 
+========== table 이름 바꾸기 =======
+========== 필드 추가 =======
+
+
+show tables;
+alter table book rename b2;
+alter table b2 add press char(20);
+desc b2;
+
 ==================================
+
+# drop = 테이블을 지우는것
+# delete = 테이블의 내용을 지우는것(테이블은 남아있음)
 
 
 
