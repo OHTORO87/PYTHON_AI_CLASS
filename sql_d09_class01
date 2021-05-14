@@ -245,13 +245,18 @@ Enter password: ****
 #퍼포먼스>대쉬보드 : 현재 db상태 확인 가능
 # Ctrl + Enter = 한줄씩 확인가능
 # Ctrl + Shift + Enter = 여러줄 확인가능
+# -- sql은 이게 주석임 --
 
 create database rootdb;
 use rootdb;
 show databases;
 create table book(
-	title char(30),
-    author varchar(30),
+	title char(30), -- char 30 은 고정폭 30칸
+			(속도는 이게 빠르다)
+	
+    author varchar(30), -- varchar 30은 가변폭 30칸을 쓸수 있지만 남는 공간은 안쓴다
+    			(이건 속도 느림)
+    
     price int);
 
 ## insert 여러번하면 중복데이터 발생함
@@ -263,7 +268,20 @@ insert into book values('MySQL이다', '우재남', 30000);
 insert into book values('코로나이후의 세계', '미쿡사람', 16000);
 select * from book;
 
-===============================================
+============ 책 238p =============
+
+mysql 자료형
+데이터 낭비를 막기위해
+자료형을 잘 설정해줘야한다.
+
+** ENUM **
+설문조사시 선택지(EX 5개)가
+문자열로 보이지만, 컴퓨터 내부적으로는
+0, 1, 2, 3, 4 와 같은 데이터로 처리하여
+분석속도를 높히는 개념
+
+
+==================================
 
 
 
