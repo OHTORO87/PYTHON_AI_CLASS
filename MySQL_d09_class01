@@ -181,6 +181,11 @@ mysql> grant all privileges on acedb.* to ace@'%' with grant option;
 Query OK, 0 rows affected (0.01 sec)
 mysql> flush privileges;  <===========위 내용(권한을 준것)을 바로 적용해라??
 
+******* flush 해야 권한이 적용된다. 안하면 프로그램 종료하면 끗.*************
+
+
+
+
 ========cmd에서 mysql접근하는 방법===========
 ====경로연결하고, ace로 접속해서, user 정보 확인까지===
 
