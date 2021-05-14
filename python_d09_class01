@@ -175,10 +175,11 @@ mysql> select user from user;
 
 
 
-========유저에게 접근권한을 주는것====
+========유저에게 acedb에 대한 접근권한&사용권한?을 주는것====
 
 mysql> grant all privileges on acedb.* to ace@'%' with grant option;
 Query OK, 0 rows affected (0.01 sec)
+mysql> flush privileges;  <===========위 내용(권한을 준것)을 바로 적용해라??
 
 ========cmd에서 mysql접근하는 방법===========
 ====경로연결하고, ace로 접속해서, user 정보 확인까지===
