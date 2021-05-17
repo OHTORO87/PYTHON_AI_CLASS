@@ -32,3 +32,76 @@ select * from s5 where  avg between 70 and 90;
 select * from s5 where name like '이%';
 select * from s5 where name like '%신';
 select * from s5 where name like '이_신';
+
+
+
+
+*************************
+null만 찾기
+select * from s5 where total is null;
+select * from s5 where total is not null;
+
+*************************
+
+
+select trim('   kkk   ');
+select ltrim('   kkk   ');
+select rtrim('   kkk   ');
+
+
+
+
+==============================
+
+-- root로 접속
+
+use world;
+show tables;
+desc city;
+select count(*) from city;
+select * from city limit 50;
+select * from city where CountryCode = 'kor';
+select * from city where CountryCode = 'jpn';
+
+desc country;
+select count(*) from country;
+
+desc countrylanguage;
+select count(*) from countrylanguage;
+
+
+select * from city where name = 'seoul';
+select * from city where name in ('seoul', 'new york');
+
+
+===========================
+컨트리코드가 kor인것만 출력
+select * from city where CountryCode =
+(select CountryCode from city where name = 'seoul');
+-- 쿼리문 안에 또다른 쿼리문을 넣는것 = 서브쿼리
+
+
+===========================
+인구수 랭킹 10 뽑기
+select * from city order by Population desc limit 10;
+
+
+===========================
+그룹으로 묶기
+각 국가에서 900만명이 넘는 도시 출력
+ex) 회사에서 연봉 1억 넘는 사람 출력같은곳에 쓸수 있음 
+
+select countrycode, name, max(Population) from city
+	group by CountryCode having max(Population) > 9000000;
+
+
+
+********** join **********
+
+select city.Name, city.CountryCode, city.Population, country.GNP
+from city
+join country
+on city.CountryCode = country.code;
+
+
+
