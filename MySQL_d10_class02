@@ -21,3 +21,14 @@ select * from s5;
 select * from s5 where  (avg >= 70) and (avg <= 90);
 select * from s5 where  avg >= 70 and avg <= 90;
 select * from s5 where  avg between 70 and 90;
+
+
+
+*****************************
+
+
+특정 데이터를 포함하는 자료 
+
+select * from s5 where name like '이%';
+select * from s5 where name like '%신';
+select * from s5 where name like '이_신';
