@@ -94,7 +94,7 @@ Uniquely identifies each row in a table
 
 FOREIGN KEY 
 - Prevents actions that would destroy links between tables
-()
+(link)
 
 CHECK 
 - Ensures that the values in a column satisfies a specific condition
@@ -106,9 +106,12 @@ CREATE INDEX
 - Used to create and retrieve data from the database very quickly
 
 
+
+
+************************************
 관계형 DB(RDB)
 - TABLE TABLE 간 관계를 통한 DB관리
-***********************************
+
 JOIN
 -두개 이상의 TABLE에서 원하는 필드값을
 가져와서 출력하는것
@@ -117,8 +120,57 @@ JOIN
 
 
 
+***********************************
+
+DML
+-inser into table
+-update set table
+-delete table
+-select field ,,,, from table
+where
+limit
+order by
 
 
+DCL
+-grant
+-revoke
+-commit
+-rollback
+
+-transaction : 트랙잭션 : 작업의 단위
+은행송금(all or nothing)
+
+
+
+
+***********************************
+id(primary key 자동상승잼)
+
+create table if not exists s(
+	id int auto_increment primary key,
+	name varchar(20),
+    kor tinyint,
+    eng tinyint,
+    mat tinyint);
+    
+desc s;
+insert into s(id, name, kor, eng, mat) values(101,'이순신',85,87,90);
+insert into s(name, kor, eng, mat) values('강감찬',75,80,90);
+insert into s(name, kor, eng, mat) values('한석봉',99,98,99);
+insert into s(name, kor, eng, mat) values('황진이',35,45,20);
+insert into s(name, kor, eng, mat) values('안중근',90,85,90);
+insert into s(name, kor, eng, mat) values('박문수',95,98,96);
+insert into s(name, kor, eng, mat) values('임꺽정',15,35,45);
+insert into s(name, kor, eng, mat) values('김정호',90,95,80);
+insert into s(name, kor, eng, mat) values('정몽주',90,90,95);
+insert into s(name, kor, eng, mat) values('양주종',50,45,60);
+
+
+
+
+
+***********************************
 
 
 
