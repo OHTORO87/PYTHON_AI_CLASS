@@ -1,0 +1,23 @@
+# 오후수업
+
+
+create table if not exists s5(
+	name char(20),
+    total int,
+	avg float);
+
+-- s의 데이터 s5에 넣기    
+insert into s5
+	select name, kor+eng+mat, (kor+eng+mat)/3.0 from s;
+
+select * from s5;
+
+******************************
+
+특정범위 설정하여 출력하기
+(괄호를 꼭 해야하나?)
+(btw은 SQL에 쓰임. ~이상 ~이하)
+
+select * from s5 where  (avg >= 70) and (avg <= 90);
+select * from s5 where  avg >= 70 and avg <= 90;
+select * from s5 where  avg between 70 and 90;
