@@ -103,5 +103,6 @@ from city
 join country
 on city.CountryCode = country.code;
 
-
+모델링 : ? 
+정규화 : 테이블 나눠놓는것
 
