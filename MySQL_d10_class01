@@ -41,10 +41,16 @@ desc Man;
 drop table Man;
 show tables;
 
+ALTER(수정)
+
+테이블명 수정
+alter table Man rename Person;
 필드추가
 alter table Man add habit char(20);
 필드삭제
 alter table Man drop habit char(20);
+
+INSERT(추가)
 
 데이터 추가(순서 바뀌어도 괜찮)
 insert into Man(name, year) values('kim', 2000);
@@ -56,6 +62,57 @@ delete from Man;
 
 
 ************************************
+
+https://www.w3schools.com/mysql
+MySQL Constraints
+
+SQL constraints are used to specify
+rules for the data in a table. Constraints
+are used to limit the type of data that can
+go into a table. This ensures the accuracy
+and reliability of the data in the table.
+If there is any violation between the
+constraint and the data action, the action
+is aborted.
+
+Constraints can be column level or table
+level. Column level constraints apply to
+a column, and table level constraints
+apply to the whole table.
+
+The following constraints are commonly used in SQL:
+
+NOT NULL - Ensures that a column cannot have a NULL value
+(공백을 허용x)
+UNIQUE - Ensures that all values in a column are different
+
+PRIMARY KEY 
+- A combination of a NOT NULL and UNIQUE.
+Uniquely identifies each row in a table
+(기본키 : 고유번호 : 주민등록번호, 학번, 회원번호)
+(기본키는 공백x : not null, 같은값x : unique)
+
+FOREIGN KEY 
+- Prevents actions that would destroy links between tables
+()
+
+CHECK 
+- Ensures that the values in a column satisfies a specific condition
+
+DEFAULT 
+- Sets a default value for a column if no value is specified
+
+CREATE INDEX 
+- Used to create and retrieve data from the database very quickly
+
+
+관계형 DB(RDB)
+- TABLE TABLE 간 관계를 통한 DB관리
+***********************************
+JOIN
+-두개 이상의 TABLE에서 원하는 필드값을
+가져와서 출력하는것
+
 
 
 
