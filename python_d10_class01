@@ -5,3 +5,19 @@
 https://www.kaggle.com/colinmorris/hello-python
 *********************
 
+database
+-table
+-view
+보기 편하게 따로 만들어둔것
+(g마켓 구매목록같은것)
+-index
+-fucntion
+-sored precedure
+-triger
+(엑셀함수 작동원리 같은거)
+(입력값을 바꾸면 탕!하고 결과에 반영)
+
+/*root 고유권한
+create database mydb;
+drop database mydb;
+*/
