@@ -1,9 +1,9 @@
 # 2021 0517(월요일)
 
-*********************
+************************************
 # 캐글(튜토리얼 개꿀잼)
 https://www.kaggle.com/colinmorris/hello-python
-*********************
+************************************
 
 database
 -table
@@ -21,3 +21,50 @@ database
 create database mydb;
 drop database mydb;
 */
+
+-- 한줄 주석
+
+**********************************
+use acedb;
+show tables;
+create table Man(
+	name char(20),
+  year int);
+    
+    
+create table if not exists Man(
+	name char(20),
+  year int);    
+    
+desc Man;
+
+drop table Man;
+show tables;
+
+필드추가
+alter table Man add habit char(20);
+필드삭제
+alter table Man drop habit char(20);
+
+데이터 추가(순서 바뀌어도 괜찮)
+insert into Man(name, year) values('kim', 2000);
+insert into Man(year, name) values(1995, 'choi');
+
+데이터만 지우기
+(테이블은 있다)
+delete from Man;
+
+
+************************************
+
+
+
+
+
+
+
+
+
+
+
+
